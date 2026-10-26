@@ -136,7 +136,7 @@
     root.setAttribute('data-theme', t);
     themeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
     const m = $('meta[name="theme-color"]');
-    if (m) m.content = t === 'dark' ? '#090c10' : '#f1f4ee';
+    if (m) m.content = t === 'dark' ? '#090c10' : '#f6f7f4';
     if (persist) { try { localStorage.setItem('hau-theme', t); } catch (e) { /* storage blocked */ } }
   }
   applyTheme(root.getAttribute('data-theme') || 'dark', false);
