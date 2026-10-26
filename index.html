@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HAU — Dang Van Chien</title>
   <meta name="description" content="HAU (Dang Van Chien) — fourth-year AI student at PTIT working on computer vision and applied mathematics. Honors, research and path.">
-  <meta name="theme-color" content="#f4f0e8">
+  <meta name="theme-color" content="#090c10">
   <meta property="og:type" content="website">
   <meta property="og:title" content="HAU — Dang Van Chien">
   <meta property="og:description" content="Fourth-year AI student at PTIT. Computer vision, applied mathematics, aspiring AI researcher.">
   <meta property="og:image" content="https://duahauhz.github.io/img/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2315171c'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23f4f0e8'%3EH%3C/text%3E%3Ccircle cx='50' cy='46' r='5' fill='%23e8472b'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23090c10'/%3E%3Ctext x='30' y='46' font-family='Arial,sans-serif' font-weight='700' font-size='40' text-anchor='middle' fill='%23e8eef5'%3EH%3C/text%3E%3Crect x='46' y='40' width='9' height='9' rx='2' fill='%23c6ff3d'/%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 
   <script>
@@ -24,7 +24,7 @@
       var d = document.documentElement, t = null;
       d.classList.add('js');
       try { t = localStorage.getItem('hau-theme'); } catch (e) {}
-      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      if (!t) t = 'dark';
       d.setAttribute('data-theme', t);
     })();
   </script>
@@ -36,7 +36,7 @@
   <!-- ───────── NAV ───────── -->
   <header class="nav" id="nav">
     <div class="wrap nav-in">
-      <a class="logo" href="#top" aria-label="HAU — back to top">HAU<i>.</i></a>
+      <a class="logo" href="#top" aria-label="HAU — back to top">HAU<i></i></a>
       <nav class="nav-links" id="nav-links" aria-label="Sections">
         <a href="#about">About</a>
         <a href="#research">Research</a>
@@ -63,8 +63,8 @@
       <div class="glow" aria-hidden="true"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow mono">AI student &middot; PTIT, Hanoi</p>
-          <h1 class="wordmark" aria-label="HAU">HAU<i>.</i></h1>
+          <p class="eyebrow mono">[ AI student // PTIT, Hanoi ]</p>
+          <h1 class="wordmark" aria-label="HAU">HAU<i></i></h1>
           <p class="fullname">Dang Van Chien</p>
           <p class="lede">Fourth-year AI student. I work on <span class="rotator" id="rotator" data-words="computer vision|object detection|image segmentation|applied mathematics">computer vision</span> and I want to become an AI researcher.</p>
           <div class="cta">
@@ -74,11 +74,17 @@
         </div>
 
         <div class="hero-art" id="hero-art">
-          <div class="ring" aria-hidden="true"></div>
-          <div class="disc" aria-hidden="true"></div>
-          <div class="arch-wrap">
-            <figure class="arch"><img src="img/asiancomnet-presenting.jpg" width="1024" height="1536" alt="HAU presenting his paper at ASIANComNet 2026"></figure>
+          <div class="ringline" aria-hidden="true"></div>
+          <div class="hud mono" aria-hidden="true"><span><b>&#9679;</b> detect</span><span>conf &ge; 0.80</span></div>
+          <div class="frame">
+            <div class="photo"><img src="img/asiancomnet-presenting.jpg" width="1024" height="1536" alt="HAU presenting his paper at ASIANComNet 2026"></div>
+            <div class="scan" aria-hidden="true"></div>
+            <div class="box b-person" aria-hidden="true"><span>person 0.98</span></div>
+            <div class="box b-face" aria-hidden="true"><span>face 0.99</span></div>
+            <div class="box b-mic" aria-hidden="true"><span>microphone 0.93</span></div>
+            <div class="box b-id" aria-hidden="true"><span>id-card 0.88</span></div>
           </div>
+          <div class="hud bot mono" aria-hidden="true"><span>1024 &times; 1536</span><span>yolo &middot; demo overlay</span></div>
           <button class="float f1" type="button" data-open="paper">
             <small class="mono">First author</small><strong>ASIANComNet 2026</strong>
           </button>
@@ -105,9 +111,22 @@
     <!-- ───────── ABOUT ───────── -->
     <section class="sec" id="about">
       <div class="wrap">
-        <header class="sec-head reveal"><p class="kicker mono"><span>01</span> About</p></header>
+        <header class="sec-head reveal"><p class="kicker mono">[ <span>01</span> // about ]</p></header>
         <div class="about-grid">
-          <p class="statement reveal">I like turning computer-vision ideas into working systems &mdash; and learning the <i>math</i> to do it properly.</p>
+          <div class="about-left">
+            <p class="statement reveal">I like turning computer-vision ideas into working systems &mdash; and learning the <i>math</i> to do it properly.</p>
+            <div class="code reveal">
+              <div class="code-bar mono"><i></i><i></i><i></i><span>profile.json</span></div>
+<pre><code><span class="p">{</span>
+  <span class="k">"name"</span><span class="p">:</span>   <span class="s">"Dang Van Chien"</span><span class="p">,</span>
+  <span class="k">"alias"</span><span class="p">:</span>  <span class="s">"HAU"</span><span class="p">,</span>
+  <span class="k">"school"</span><span class="p">:</span> <span class="s">"PTIT"</span><span class="p">,</span>
+  <span class="k">"year"</span><span class="p">:</span>   <span class="n">4</span><span class="p">,</span>
+  <span class="k">"focus"</span><span class="p">:</span>  <span class="p">[</span><span class="s">"computer vision"</span><span class="p">,</span> <span class="s">"applied math"</span><span class="p">],</span>
+  <span class="k">"goal"</span><span class="p">:</span>   <span class="s">"AI researcher"</span>
+<span class="p">}</span></code></pre>
+            </div>
+          </div>
           <dl class="facts reveal">
             <div><dt class="mono">Now</dt><dd>Year 4, Artificial Intelligence at the Posts and Telecommunications Institute of Technology (PTIT), Hanoi.</dd></div>
             <div><dt class="mono">Focus</dt><dd>Computer vision and applied mathematics.</dd></div>
@@ -124,11 +143,11 @@
     <section class="sec" id="research">
       <div class="wrap">
         <header class="sec-head reveal">
-          <p class="kicker mono"><span>02</span> Research</p>
+          <p class="kicker mono">[ <span>02</span> // research ]</p>
           <h2>Things I've <i>built</i></h2>
         </header>
         <div class="r-grid">
-          <article class="r-card reveal">
+          <article class="r-card brk reveal">
             <span class="r-num mono">01</span>
             <h3>Food recognition &amp; calorie estimation</h3>
             <p>SAM-Assisted Dataset Generation for Food Recognition and Calorie Estimation with Single-Stage YOLO Segmentation.</p>
@@ -137,7 +156,7 @@
             <button class="link-btn" type="button" data-open="paper">View photos <span aria-hidden="true">&rarr;</span></button>
           </article>
 
-          <article class="r-card reveal">
+          <article class="r-card brk reveal">
             <span class="r-num mono">02</span>
             <h3>Small-lesion detection on X-ray</h3>
             <p>Detecting small disease regions on X-ray images with a YOLO-based computer vision model.</p>
@@ -146,7 +165,7 @@
             <button class="link-btn" type="button" data-open="harvard">View photos <span aria-hidden="true">&rarr;</span></button>
           </article>
 
-          <article class="r-card reveal">
+          <article class="r-card brk reveal">
             <span class="r-num mono">03</span>
             <h3>AI for ethnic-minority languages</h3>
             <p>An AI application that supports ethnic-minority languages.</p>
@@ -155,7 +174,7 @@
             <button class="link-btn" type="button" data-open="young">View photos <span aria-hidden="true">&rarr;</span></button>
           </article>
 
-          <article class="r-card reveal">
+          <article class="r-card brk reveal">
             <span class="r-num mono">04</span>
             <h3>Smart Traffic Light Management System</h3>
             <p>A machine-learning and deep-learning system for traffic-light management &mdash; where my research started.</p>
@@ -171,7 +190,7 @@
     <section class="sec" id="honors">
       <div class="wrap">
         <header class="sec-head reveal">
-          <p class="kicker mono"><span>03</span> Honors</p>
+          <p class="kicker mono">[ <span>03</span> // honors ]</p>
           <h2>Honors <i>&amp;</i> Awards</h2>
         </header>
         <div class="filters reveal" id="filters" role="group" aria-label="Filter honors">
@@ -192,7 +211,7 @@
     <section class="sec" id="path">
       <div class="wrap">
         <header class="sec-head reveal">
-          <p class="kicker mono"><span>04</span> Path</p>
+          <p class="kicker mono">[ <span>04</span> // path ]</p>
           <h2>The <i>Path</i></h2>
         </header>
         <ol class="timeline" id="timeline">
@@ -213,7 +232,7 @@
     <section class="sec" id="github">
       <div class="wrap">
         <header class="sec-head reveal">
-          <p class="kicker mono"><span>05</span> GitHub</p>
+          <p class="kicker mono">[ <span>05</span> // github ]</p>
           <h2>Live from <i>GitHub</i></h2>
           <p class="gh-meta mono" id="gh-meta" aria-live="polite">Loading&hellip;</p>
         </header>
@@ -227,8 +246,8 @@
     <!-- ───────── CONTACT ───────── -->
     <section class="sec contact" id="contact">
       <div class="wrap">
-        <header class="sec-head reveal"><p class="kicker mono"><span>06</span> Contact</p></header>
-        <h2 class="big reveal">Let's talk<i>.</i></h2>
+        <header class="sec-head reveal"><p class="kicker mono">[ <span>06</span> // contact ]</p></header>
+        <h2 class="big reveal">Let's talk<i></i></h2>
         <p class="contact-lede reveal">Open to research collaborations, internships, and conversations about computer vision and applied math.</p>
         <div class="contact-row reveal">
           <a class="mail" href="mailto:ChienDV.B23CE012@stu.ptit.edu.vn">ChienDV.B23CE012@stu.ptit.edu.vn</a>

@@ -136,10 +136,10 @@
     root.setAttribute('data-theme', t);
     themeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
     const m = $('meta[name="theme-color"]');
-    if (m) m.content = t === 'dark' ? '#0f1013' : '#f4f0e8';
+    if (m) m.content = t === 'dark' ? '#090c10' : '#f1f4ee';
     if (persist) { try { localStorage.setItem('hau-theme', t); } catch (e) { /* storage blocked */ } }
   }
-  applyTheme(root.getAttribute('data-theme') || 'light', false);
+  applyTheme(root.getAttribute('data-theme') || 'dark', false);
   themeBtn.addEventListener('click', () => applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark', true));
 
   /* ───────── nav, progress, timeline (one rAF-throttled scroll handler) ───────── */
@@ -274,7 +274,7 @@
   function buildCard(it) {
     const tile = it.imgs.length === 0;
     const b = el('button', {
-      className: 'card ' + (tile ? 'tile' + (it.accent ? ' accent' : '') : 'photo') + (it.wide ? ' wide' : ''),
+      className: 'card brk ' + (tile ? 'tile' + (it.accent ? ' accent' : '') : 'photo') + (it.wide ? ' wide' : ''),
       type: 'button',
       'aria-haspopup': 'dialog',
     });
