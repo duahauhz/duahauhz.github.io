@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HAU — Dang Van Chien</title>
+  <meta name="description" content="HAU (Dang Van Chien) — fourth-year AI student at PTIT working on computer vision and applied mathematics. Honors, research and path.">
+  <meta name="theme-color" content="#f4f0e8">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HAU — Dang Van Chien">
+  <meta property="og:description" content="Fourth-year AI student at PTIT. Computer vision, applied mathematics, aspiring AI researcher.">
+  <meta property="og:image" content="https://duahauhz.github.io/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2315171c'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23f4f0e8'%3EH%3C/text%3E%3Ccircle cx='50' cy='46' r='5' fill='%23e8472b'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <script>
+    // set theme + js flag before first paint (no flash)
+    (function () {
+      var d = document.documentElement, t = null;
+      d.classList.add('js');
+      try { t = localStorage.getItem('hau-theme'); } catch (e) {}
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><i id="progress"></i></div>
+
+  <!-- ───────── NAV ───────── -->
+  <header class="nav" id="nav">
+    <div class="wrap nav-in">
+      <a class="logo" href="#top" aria-label="HAU — back to top">HAU<i>.</i></a>
+      <nav class="nav-links" id="nav-links" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#honors">Honors</a>
+        <a href="#path">Path</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-tools">
+        <button class="icon-btn" id="theme" type="button" aria-label="Switch to dark theme">
+          <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ───────── HERO ───────── -->
+    <section class="hero" id="top">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow mono">AI student &middot; PTIT, Hanoi</p>
+          <h1 class="wordmark" aria-label="HAU">HAU<i>.</i></h1>
+          <p class="fullname">Dang Van Chien</p>
+          <p class="lede">Fourth-year AI student. I work on <span class="rotator" id="rotator" data-words="computer vision|object detection|image segmentation|applied mathematics">computer vision</span> and I want to become an AI researcher.</p>
+          <div class="cta">
+            <a class="btn primary" href="#honors">See my work</a>
+            <button class="btn" id="copy-email-hero" type="button" data-copy>Copy email</button>
+          </div>
+        </div>
+
+        <div class="hero-art" id="hero-art">
+          <div class="ring" aria-hidden="true"></div>
+          <div class="disc" aria-hidden="true"></div>
+          <div class="arch-wrap">
+            <figure class="arch"><img src="img/asiancomnet-presenting.jpg" width="1024" height="1536" alt="HAU presenting his paper at ASIANComNet 2026"></figure>
+          </div>
+          <button class="float f1" type="button" data-open="paper">
+            <small class="mono">First author</small><strong>ASIANComNet 2026</strong>
+          </button>
+          <button class="float f2" type="button" data-open="harvard">
+            <small class="mono">Promising Award</small><strong>Harvard Hackathon<br>Vietnam Hub, 2026</strong>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="track" id="track">
+        <span>Computer Vision</span><span>Object Detection &middot; YOLO</span><span>Segment Anything (SAM)</span><span>Instance Segmentation</span><span>Medical Imaging</span><span>Dataset Generation</span><span>Machine Learning</span><span>Deep Learning</span><span>Applied Mathematics</span>
+      </div>
+    </div>
+
+    <section class="wrap stats" id="stats" aria-label="At a glance">
+      <div class="stat"><b data-count="5">5</b><span class="mono">Awards</span></div>
+      <div class="stat"><b data-count="1">1</b><span class="mono">Accepted paper</span></div>
+      <div class="stat"><b data-count="2">2</b><span class="mono">Scholarships</span></div>
+      <div class="stat"><b data-count="3">3</b><span class="mono">Certificates</span></div>
+    </section>
+
+    <!-- ───────── ABOUT ───────── -->
+    <section class="sec" id="about">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="kicker mono"><span>01</span> About</p></header>
+        <div class="about-grid">
+          <p class="statement reveal">I like turning computer-vision ideas into working systems &mdash; and learning the <i>math</i> to do it properly.</p>
+          <dl class="facts reveal">
+            <div><dt class="mono">Now</dt><dd>Year 4, Artificial Intelligence at the Posts and Telecommunications Institute of Technology (PTIT), Hanoi.</dd></div>
+            <div><dt class="mono">Focus</dt><dd>Computer vision and applied mathematics.</dd></div>
+            <div><dt class="mono">Experience</dt><dd>AI Research intern at <a href="https://trithucmoi.co/" target="_blank" rel="noopener noreferrer">Tri Thuc Moi</a> (software outsourcing for the Japanese market), completed July 2026.</dd></div>
+            <div><dt class="mono">Goal</dt><dd>Become an AI researcher.</dd></div>
+            <div><dt class="mono">Languages</dt><dd>Vietnamese (native), English (B1).</dd></div>
+            <div><dt class="mono">Off-screen</dt><dd>Music, reading, cooking, and doing math for fun.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── RESEARCH ───────── -->
+    <section class="sec" id="research">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker mono"><span>02</span> Research</p>
+          <h2>Things I've <i>built</i></h2>
+        </header>
+        <div class="r-grid">
+          <article class="r-card reveal">
+            <span class="r-num mono">01</span>
+            <h3>Food recognition &amp; calorie estimation</h3>
+            <p>SAM-Assisted Dataset Generation for Food Recognition and Calorie Estimation with Single-Stage YOLO Segmentation.</p>
+            <ul class="tags"><li>SAM</li><li>YOLO</li><li>Segmentation</li><li>Dataset generation</li></ul>
+            <p class="r-out"><b>Accepted at ASIANComNet 2026.</b> First author and presenter; corresponding author Nguyen Quang Huy.</p>
+            <button class="link-btn" type="button" data-open="paper">View photos <span aria-hidden="true">&rarr;</span></button>
+          </article>
+
+          <article class="r-card reveal">
+            <span class="r-num mono">02</span>
+            <h3>Small-lesion detection on X-ray</h3>
+            <p>Detecting small disease regions on X-ray images with a YOLO-based computer vision model.</p>
+            <ul class="tags"><li>YOLO</li><li>Medical imaging</li><li>Detection</li></ul>
+            <p class="r-out"><b>Promising Award</b> at the Harvard University Global Hackathon 2026 (Vietnam Hub).</p>
+            <button class="link-btn" type="button" data-open="harvard">View photos <span aria-hidden="true">&rarr;</span></button>
+          </article>
+
+          <article class="r-card reveal">
+            <span class="r-num mono">03</span>
+            <h3>AI for ethnic-minority languages</h3>
+            <p>An AI application that supports ethnic-minority languages.</p>
+            <ul class="tags"><li>Applied AI</li><li>Language</li></ul>
+            <p class="r-out"><b>3rd Prize</b> and <b>2nd Prize, Most Favorite Product</b> at Young Creation 2025 (HUST). Shown at HN INNOVATION 2026.</p>
+            <button class="link-btn" type="button" data-open="young">View photos <span aria-hidden="true">&rarr;</span></button>
+          </article>
+
+          <article class="r-card reveal">
+            <span class="r-num mono">04</span>
+            <h3>Smart Traffic Light Management System</h3>
+            <p>A machine-learning and deep-learning system for traffic-light management &mdash; where my research started.</p>
+            <ul class="tags"><li>Machine learning</li><li>Deep learning</li></ul>
+            <p class="r-out"><b>Samsung AI Certificate</b> and <b>3rd Prize</b> at AI FOR LIFE 2025 (PTIT).</p>
+            <button class="link-btn" type="button" data-open="afl">View photos <span aria-hidden="true">&rarr;</span></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── HONORS ───────── -->
+    <section class="sec" id="honors">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker mono"><span>03</span> Honors</p>
+          <h2>Honors <i>&amp;</i> Awards</h2>
+        </header>
+        <div class="filters reveal" id="filters" role="group" aria-label="Filter honors">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="award" aria-pressed="false">Awards</button>
+          <button class="chip" type="button" data-filter="research" aria-pressed="false">Research</button>
+          <button class="chip" type="button" data-filter="learning" aria-pressed="false">Learning</button>
+          <button class="chip" type="button" data-filter="experience" aria-pressed="false">Experience</button>
+          <span class="count mono" id="count" aria-live="polite"></span>
+        </div>
+        <div class="grid" id="grid">
+          <noscript><p>Please enable JavaScript to browse the honors. Highlights: Promising Award at Harvard University Global Hackathon 2026 (Vietnam Hub); paper accepted at ASIANComNet 2026; 3rd Prize and 2nd Prize Most Favorite Product at Young Creation 2025; Consolation Prize at Olympic AI PTIT 2025; 3rd Prize at AI FOR LIFE 2025.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── PATH ───────── -->
+    <section class="sec" id="path">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker mono"><span>04</span> Path</p>
+          <h2>The <i>Path</i></h2>
+        </header>
+        <ol class="timeline" id="timeline">
+          <li><span class="node" aria-hidden="true"></span><article class="t-card"><p class="d mono">2023</p><h3>Freshman at PTIT</h3><p>Started at the Posts and Telecommunications Institute of Technology.</p></article></li>
+          <li><span class="node" aria-hidden="true"></span><article class="t-card"><p class="d mono">Apr 2025</p><h3>Excellent scholarship</h3><p>PTIT scholarship for outstanding academic results.</p></article></li>
+          <li><span class="node" aria-hidden="true"></span><article class="t-card"><p class="d mono">2025</p><h3>Research begins</h3><p>Samsung AI Certificate with the Smart Traffic Light Management System, then 3rd Prize at AI FOR LIFE 2025.</p><button class="link-btn" type="button" data-open="afl">Photos <span aria-hidden="true">&rarr;</span></button></article></li>
+          <li><span class="node" aria-hidden="true"></span><article class="t-card"><p class="d mono">Oct &ndash; Dec 2025</p><h3>Contest season</h3><p>Consolation Prize at Olympic AI PTIT, 3rd Prize and Most Favorite Product at Young Creation, and a Good scholarship.</p><button class="link-btn" type="button" data-open="young">Photos <span aria-hidden="true">&rarr;</span></button></article></li>
+          <li><span class="node" aria-hidden="true"></span><article class="t-card"><p class="d mono">Winter 2025</p><h3>Leveling up</h3><p>Samsung Professional Level Certificate and Fundamentals of Deep Learning.</p></article></li>
+          <li><span class="node" aria-hidden="true"></span><article class="t-card"><p class="d mono">Mar &ndash; Apr 2026</p><h3>On stage</h3><p>PTIT Startup &amp; Innovation Conference, the HN INNOVATION exhibition, and the Promising Award at the Harvard Hackathon.</p><button class="link-btn" type="button" data-open="harvard">Photos <span aria-hidden="true">&rarr;</span></button></article></li>
+          <li><span class="node" aria-hidden="true"></span><article class="t-card"><p class="d mono">Jul 2026</p><h3>AI Research intern</h3><p>Completed at <a href="https://trithucmoi.co/" target="_blank" rel="noopener noreferrer">Tri Thuc Moi</a>.</p><button class="link-btn" type="button" data-open="intern">Photos <span aria-hidden="true">&rarr;</span></button></article></li>
+          <li class="last"><span class="node" aria-hidden="true"></span><article class="t-card"><p class="d mono">Sep 2026</p><h3>First-author paper</h3><p>Accepted at ASIANComNet 2026, and I'm the one presenting it.</p><button class="link-btn" type="button" data-open="paper">Photos <span aria-hidden="true">&rarr;</span></button></article></li>
+        </ol>
+        <p class="next mono reveal">Next stop &rarr; AI researcher</p>
+      </div>
+    </section>
+
+    <!-- ───────── GITHUB ───────── -->
+    <section class="sec" id="github">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker mono"><span>05</span> GitHub</p>
+          <h2>Live from <i>GitHub</i></h2>
+          <p class="gh-meta mono" id="gh-meta" aria-live="polite">Loading&hellip;</p>
+        </header>
+        <div class="repos" id="repos" aria-busy="true">
+          <div class="repo skeleton"></div><div class="repo skeleton"></div><div class="repo skeleton"></div>
+        </div>
+        <p class="gh-more reveal"><a class="btn" href="https://github.com/duahauhz?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories &nearr;</a></p>
+      </div>
+    </section>
+
+    <!-- ───────── CONTACT ───────── -->
+    <section class="sec contact" id="contact">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="kicker mono"><span>06</span> Contact</p></header>
+        <h2 class="big reveal">Let's talk<i>.</i></h2>
+        <p class="contact-lede reveal">Open to research collaborations, internships, and conversations about computer vision and applied math.</p>
+        <div class="contact-row reveal">
+          <a class="mail" href="mailto:ChienDV.B23CE012@stu.ptit.edu.vn">ChienDV.B23CE012@stu.ptit.edu.vn</a>
+          <button class="btn" id="copy-email" type="button" data-copy>Copy</button>
+        </div>
+        <ul class="socials reveal">
+          <li><a href="https://github.com/duahauhz" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">&nearr;</span></a></li>
+          <li><a href="https://orcid.org/0009-0009-8721-4864" target="_blank" rel="noopener noreferrer">ORCID <span aria-hidden="true">&nearr;</span></a></li>
+          <li><a href="https://trithucmoi.co/" target="_blank" rel="noopener noreferrer">Tri Thuc Moi <span aria-hidden="true">&nearr;</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <span class="mono">&copy; 2026 HAU &mdash; Dang Van Chien</span>
+      <a class="mono" href="#top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <!-- ───────── LIGHTBOX ───────── -->
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden>
+    <div class="lb-panel">
+      <div class="lb-media">
+        <img id="lb-img" alt="">
+        <button class="lb-nav prev" id="lb-prev" type="button" aria-label="Previous photo">&larr;</button>
+        <button class="lb-nav next" id="lb-next" type="button" aria-label="Next photo">&rarr;</button>
+        <div class="lb-thumbs" id="lb-thumbs"></div>
+      </div>
+      <div class="lb-info">
+        <button class="lb-close" id="lb-close" type="button" aria-label="Close">&times;</button>
+        <span class="pill mono" id="lb-date"></span>
+        <h3 id="lb-title"></h3>
+        <p class="lb-sub" id="lb-sub"></p>
+        <p class="lb-desc" id="lb-desc"></p>
+        <a class="link-btn" id="lb-link" target="_blank" rel="noopener noreferrer" hidden></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
